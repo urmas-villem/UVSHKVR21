@@ -1,6 +1,7 @@
 <?php
 
 	require_once "../../../conf.php";
+	require_once "fnc_general.php";
 	$news_input_error = null;
 	if(isset($_POST["news_submit"])){
 		if(empty($_POST["news_title_input"])){
@@ -17,7 +18,7 @@
 	
 	function store_news($news_title, $news_content, $news_author) {
 		//loome andmebaasiga ühenduse
-		$connection = new mysqli($GLOBALS["server_host"], $GLOBALS["server_user_name"], $GLOBALS["server_pwd"], $GLOBALS["database"]);
+		$connection = new mysqli($GLOBALS["server_host"], $GLOBALS["server_user_name"], $GLOBALS["server_password"], $GLOBALS["database"]);
 		//määrame andmebaasi ühenduse kodeeringu
 		$connection -> set_charset("utf8");
 		//valmistan ette sql käsu

@@ -4,7 +4,7 @@
 
 	function read_news() {
 		//loome andmebaasiga ühenduse
-		$connection = new mysqli($GLOBALS["server_host"], $GLOBALS["server_user_name"], $GLOBALS["server_pwd"], $GLOBALS["database"]);
+		$connection = new mysqli($GLOBALS["server_host"], $GLOBALS["server_user_name"], $GLOBALS["server_password"], $GLOBALS["database"]);
 		//määrame suhtluse kodeeringu
 		$connection -> set_charset("utf8");
 		//valmistan ette SQL käsu
